@@ -1,17 +1,11 @@
-body, html {
-  font-family: "Roboto", sans-serif;
-  background: linear-gradient(to top, #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
-  height: 100%;
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo {
-  background-image: url('img/MYIMPAGE.jpg');
-  width: 100px;
-  height: 100px;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.active {
-  color: pink;
+.landing-input-container {
+  display: flex;
+  flex-direction: row;
 }

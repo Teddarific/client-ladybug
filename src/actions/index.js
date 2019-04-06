@@ -1,20 +1,15 @@
-// keys for actiontypes
 export const ActionTypes = {
-  INCREMENT: 'INCREMENT',
-  DECREMENT: 'DECREMENT',
+  SUBMIT_LINKS: 'SUBMIT_LINKS',
 };
 
 
-export function increment() {
-  return {
-    type: ActionTypes.INCREMENT,
-    payload: null,
-  };
-}
+export function submitLinks(feLink, beLink) {
+  return (dispatch) => {
+    dispatch({
+      type: ActionTypes.SUBMIT_LINKS,
+      payload: { feLink, beLink },
+    });
 
-export function decrement() {
-  return {
-    type: ActionTypes.DECREMENT,
-    payload: null,
+    return Promise.resolve();
   };
 }

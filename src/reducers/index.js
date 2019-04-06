@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux';
-
-import CountReducer from './count-reducer';
+import LinkReducer from './linkReducer';
 
 const rootReducer = combineReducers({
-  count: CountReducer,
+  links: LinkReducer,
 });
 
 export default rootReducer;
