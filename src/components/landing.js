@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 import LightSpeed from 'react-reveal/LightSpeed';
+import Rotate from 'react-reveal/Rotate';
 
 import { submitLinks } from '../actions/index';
 import Logo from '../img/final_logo.png';
@@ -56,7 +57,9 @@ class Landing extends Component {
             </Fade>
             <Fade bottom cascade>
               <div className="landing-input-container">
-                <div className="landing-input-label"> Frontend URL </div>
+                <Rotate top left when={this.state.renderFrontEnd}>
+                  <div className="landing-input-label"> Frontend URL </div>
+                </Rotate>
                 <input className="landing-input" onChange={this.handleChange} type="text" name="frontendLink" value={this.state.frontendLink} />
                 <button className="toggle-input" onClick={this.toggleInput}><i className="fas fa-retweet" /> Backend </button>
               </div>
@@ -75,7 +78,9 @@ class Landing extends Component {
             </Fade>
             <Fade bottom cascade>
               <div className="landing-input-container">
-                <div className="landing-input-label"> Backend API URL </div>
+                <Rotate top left when={!this.state.renderFrontEnd}>
+                  <div className="landing-input-label"> Backend API URL </div>
+                </Rotate>
                 <input className="landing-input" onChange={this.handleChange} type="text" name="backendLink" value={this.state.backendLink} />
                 <button className="toggle-input" onClick={this.toggleInput}><i className="fas fa-retweet" /> Frontend </button>
               </div>
