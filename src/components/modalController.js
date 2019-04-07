@@ -34,7 +34,7 @@ class ModalController extends Component {
       if (this.props.item.severity !== 'success') {
         meta = (
           <React.Fragment>
-            <div className="modal-meta-helper"> The code in question: </div>
+            <div className="modal-meta-helper"> The code in question (if applicable): </div>
             <SyntaxHighlighter language="html" style={docco}>
               {this.props.item.meta}
             </SyntaxHighlighter>

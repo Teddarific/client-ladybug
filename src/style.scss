@@ -27,6 +27,21 @@ body, html {
 .landing-input-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
+
+  .landing-input-label {
+    margin-right: 8px;
+  }
+
+  input {
+    height: 3.5vh;
+    width: 22vw;
+    line-height:15px;
+    margin-top: 2px;
+    outline: 0 none;
+    background-color: white;
+    font-size: 2.5vh;
+  }
 }
 
 .landing-logo {
