@@ -2,28 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
-import LightSpeed from 'react-reveal/LightSpeed';
 import Rotate from 'react-reveal/Rotate';
-import Typing from 'react-typing-animation';
-
-import InputContainer from './inputContainer';
 
 import { submitLinks } from '../actions/index';
-import Logo from '../img/final_logo.png';
-import LadybugTitle from '../img/ladybug.png';
-import LeafLeft from '../img/leaf-left.png';
-import LeafTop from '../img/leaf-top.png';
 
-import '../style.scss';
-
-class Landing extends Component {
+class InputContainer extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       frontendLink: '',
       backendLink: '',
-      renderFrontend: true,
+      renderFrontend: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -50,7 +40,6 @@ class Landing extends Component {
       });
   }
 
-  // need logic on checking whether you get 200
   render() {
     const inputContainer = this.state.renderFrontend ?
       (
@@ -78,30 +67,10 @@ class Landing extends Component {
         </Fade>
       );
 
-    return (
-      <div className="container">
-        <img className="lower-left" alt="leaf-upper" src={LeafLeft} />
-        <img className="top-right" alt="leaf-top" src={LeafTop} />
-        <div className="landing-container">
-          <Fade top cascade>
-            <img className="landing-logo" alt="logo" src={Logo} />
-            <img className="landing-title" alt="title" src={LadybugTitle} />
-          </Fade>
-          <Typing className="typer" loop>
-            <span> Your own QA team, one click away. </span>
-            <Typing.Backspace delay={1000} count={35} />
-            <span> A full-stack automated testing suite, all for free. </span>
-            <Typing.Backspace delay={1000} count={53} />
-            <span> Built on proven research. </span>
-            <Typing.Backspace delay={1000} count={26} />
-          </Typing>
-          <InputContainer />
-        </div>
-      </div>
-    );
+    return inputContainer;
   }
 }
 
 export default withRouter(connect(null, {
   submitLinks,
-})(Landing));
+})(InputContainer));
