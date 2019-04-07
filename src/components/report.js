@@ -5,6 +5,9 @@ import Toggle from 'react-toggle';
 
 import 'react-dropdown/style.css';
 import 'react-toggle/style.css';
+
+import ModalController from './modalController';
+
 /* eslint no-continue: 0 */
 
 // Sort Type:
@@ -19,16 +22,26 @@ class Report extends Component {
     this.state = {
       sortBy: 0,
       includeSuccess: false,
+      modal: false,
+      selectedItem: null,
     };
 
     this.onSelect = this.onSelect.bind(this);
+    this.closeModal = this.closeModal.bind(this);
     this.toggleSuccess = this.toggleSuccess.bind(this);
     this.calcTable = this.calcTable.bind(this);
+    this.openModal = this.openModal.bind(this);
   }
 
   onSelect(option) {
     this.setState({
       sortBy: option.value,
+    });
+  }
+
+  closeModal() {
+    this.setState({
+      modal: false,
     });
   }
 
@@ -71,6 +84,13 @@ class Report extends Component {
     return table;
   }
 
+  openModal(item) {
+    this.setState({
+      modal: true,
+      selectedItem: item,
+    });
+  }
+
   render() {
     const options = [
       { value: 0, label: 'Type' },
@@ -93,12 +113,46 @@ class Report extends Component {
     const indexer = indexerMap[this.state.sortBy];
     const secondaryIndexer = secondaryIndexerMap[this.state.sortBy];
 
-    const renderItem = (item) => {
+    const renderItem2 = (item) => {
       const cn = `cp-${item.severity}`;
+      let content = null;
+      if (item.severity !== 'success') {
+        content = (
+          <React.Fragment>
+            <div>
+              <span> Info: </span>
+              <span> {item.text} </span>
+            </div>
+            <div>
+              <span> Meta: </span>
+              <span> {item.meta} </span>
+            </div>
+          </React.Fragment>
+        );
+      }
       return (
         <Collapsible className={cn} openedClassName={cn} transitionTime={120} trigger={item[secondaryIndexer]}>
-          <div> Test </div>
+          <div>
+            <div>
+              <span> URL: </span>
+              <span> {item.URL} </span>
+            </div>
+            <div>
+              <span> Type: </span>
+              <span> {item.type} </span>
+            </div>
+            {content}
+          </div>
         </Collapsible>
+      );
+    };
+
+    const renderItem = (item) => {
+      const cn = `Collapsible cp-${item.severity}`;
+      return (
+        <div className={cn} onClick={() => { this.openModal(item); }} role="button" tabIndex={0}>
+          <span className="Collapsible__trigger__secondary is-closed"> {item[secondaryIndexer]} </span>
+        </div>
       );
     };
 
@@ -129,7 +183,11 @@ class Report extends Component {
         <div className="report-data">
           {Object.keys(table).map(key => renderGroup(key, table[key]))}
         </div>
-
+        <ModalController
+          open={this.state.modal}
+          onClose={this.closeModal}
+          item={this.state.selectedItem}
+        />
       </div>
     );
   }
