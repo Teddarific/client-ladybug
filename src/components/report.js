@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Dropdown from 'react-dropdown';
 import Collapsible from 'react-collapsible';
+import Toggle from 'react-toggle';
 
 import 'react-dropdown/style.css';
+import 'react-toggle/style.css';
 /* eslint no-continue: 0 */
 
 // Sort Type:
@@ -16,9 +18,11 @@ class Report extends Component {
 
     this.state = {
       sortBy: 0,
+      includeSuccess: false,
     };
 
     this.onSelect = this.onSelect.bind(this);
+    this.toggleSuccess = this.toggleSuccess.bind(this);
     this.calcTable = this.calcTable.bind(this);
   }
 
@@ -28,11 +32,17 @@ class Report extends Component {
     });
   }
 
+  toggleSuccess() {
+    this.setState({
+      includeSuccess: !this.state.includeSuccess,
+    });
+  }
+
   calcTable() {
     const table = {};
     for (let i = 0; i < this.props.items.length; i += 1) {
       const item = this.props.items[i];
-      if (item.severity === 'info') {
+      if (item.severity === 'info' || (item.severity === 'success' && !this.state.includeSuccess)) {
         continue;
       }
 
@@ -101,13 +111,20 @@ class Report extends Component {
     };
 
     const table = this.calcTable();
-    console.log(table);
 
     return (
       <div className="report">
         <div className="report-filter">
           <div className="report-sortby"> Group by </div>
           <Dropdown className="report-dropdown" options={options} onChange={this.onSelect} value={options[this.state.sortBy]} placeholder="Sort by" />
+          <label htmlFor="toggle" className="report-toggle">
+            <Toggle
+              defaultChecked={this.state.includeSuccess}
+              icons={false}
+              onChange={this.toggleSuccess}
+            />
+            <span> Include successes </span>
+          </label>
         </div>
         <div className="report-data">
           {Object.keys(table).map(key => renderGroup(key, table[key]))}

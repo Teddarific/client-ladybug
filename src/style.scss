@@ -114,6 +114,17 @@ body, html {
 
       .report-dropdown {
         margin-left: 3px;
+        margin-right: 14px;
+      }
+    }
+
+    .report-toggle {
+      display: flex;
+      align-items: center;
+      margin-left: 14px;
+
+      span {
+        margin-left: 3px;
       }
     }
 
