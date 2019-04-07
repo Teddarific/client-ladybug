@@ -22,6 +22,8 @@ body, html {
   align-items: center;
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
 }
 
 .landing-input-container {
@@ -54,7 +56,7 @@ body, html {
 }
 
 .find-bugs {
-  background: #ff968d;
+  background: #404040; // black
   color: white;
 	cursor: pointer;
   border: none;
@@ -66,11 +68,12 @@ body, html {
 	letter-spacing: 1px;
 	font-weight: 700;
 	outline: none;
+  font-size: 24px;
 	position: relative;
 }
 
 .toggle-input {
-  background: #ff968d;
+  background: #e54242; // dark red
   color: white;
 	cursor: pointer;
   border: none;
@@ -82,7 +85,106 @@ body, html {
 	letter-spacing: 1px;
 	font-weight: 700;
 	outline: none;
+  font-size: 16px;
 	position: relative;
+}
+
+.toggle-input:hover {
+  background: #e54242; // dark red
+}
+
+
+/* Rectangle Out */
+.hvr-rectangle-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-rectangle-out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(68, 152, 85); // leaf green
+  border-radius: 7px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-rectangle-out:hover, .hvr-rectangle-out:focus, .hvr-rectangle-out:active {
+  color: white;
+}
+.hvr-rectangle-out:hover:before, .hvr-rectangle-out:focus:before, .hvr-rectangle-out:active:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+// @keyframes waveBottom {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   50% {
+//     transform: rotate(-4deg);
+//   }
+//   100% {
+//     transform: rotate(0deg);
+//   }
+// }
+
+.upper-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -20px;
+  width: 300px;
+  animation-duration: 4s; /* the duration of the animation */
+  animation-timing-function: ease-out; /* how the animation will behave */
+  animation-delay: 0s; /* how long to delay the animation from starting */
+  animation-iteration-count: 2; /* how many times the animation will play */
+  animation-name: wave; /* the name of the animation we defined above */
+}
+
+.lower-right {
+  bottom: 0%;
+	right: 0%;
+	position: absolute;
+  margin-right: -20px;
+  width: 300px;
+  animation-duration: 4s; /* the duration of the animation */
+  animation-timing-function: ease-out; /* how the animation will behave */
+  animation-delay: 0s; /* how long to delay the animation from starting */
+  animation-iteration-count: 2; /* how many times the animation will play */
+  animation-name: waveBottom; /* the name of the animation we defined above */
 }
 
 .terminal {

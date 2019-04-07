@@ -8,6 +8,8 @@ import Rotate from 'react-reveal/Rotate';
 import { submitLinks } from '../actions/index';
 import Logo from '../img/final_logo.png';
 import LadybugTitle from '../img/ladybug.png';
+import Leaf from '../img/realLeaf.png';
+import LeafBottom from '../img/realLeafBottom.png';
 
 import '../style.scss';
 
@@ -50,6 +52,7 @@ class Landing extends Component {
     if (this.state.renderFrontend) {
       return (
         <div className="container">
+          <img className="lower-right" alt="leaf-upper" src={LeafBottom} />
           <div className="landing-container">
             <Fade top cascade>
               <img className="landing-logo" alt="logo" src={Logo} />
@@ -58,12 +61,12 @@ class Landing extends Component {
             <Fade bottom cascade>
               <div className="landing-input-container">
                 <Rotate top left when={this.state.renderFrontEnd}>
-                  <div className="landing-input-label"> Frontend URL </div>
+                  <div className="landing-input-label"> Frontend URL: </div>
                 </Rotate>
                 <input className="landing-input" onChange={this.handleChange} type="text" name="frontendLink" value={this.state.frontendLink} />
-                <button className="toggle-input" onClick={this.toggleInput}><i className="fas fa-retweet" /> Backend </button>
+                <button className="toggle-input" onClick={this.toggleInput}><i className="fas fa-retweet" /> Backend API URL: </button>
               </div>
-              <button className="find-bugs" onClick={this.submitLinks}> Find bugs </button>
+              <button className="find-bugs hvr-rectangle-out" onClick={this.submitLinks}> Find bugs </button>
             </Fade>
           </div>
         </div>
@@ -71,6 +74,7 @@ class Landing extends Component {
     } else {
       return (
         <div className="container">
+          <img className="lower-right" alt="leaf-upper" src={LeafBottom} />
           <div className="landing-container">
             <Fade top cascade>
               <img className="landing-logo" alt="logo" src={Logo} />
@@ -79,12 +83,12 @@ class Landing extends Component {
             <Fade bottom cascade>
               <div className="landing-input-container">
                 <Rotate top left when={!this.state.renderFrontEnd}>
-                  <div className="landing-input-label"> Backend API URL </div>
+                  <div className="landing-input-label"> Backend API: </div>
                 </Rotate>
                 <input className="landing-input" onChange={this.handleChange} type="text" name="backendLink" value={this.state.backendLink} />
-                <button className="toggle-input" onClick={this.toggleInput}><i className="fas fa-retweet" /> Frontend </button>
+                <button className="toggle-input" onClick={this.toggleInput}><i className="fas fa-retweet" /> Frontend URL: </button>
               </div>
-              <button className="find-bugs" onClick={this.submitLinks}> Find bugs </button>
+              <button className="find-bugs hvr-rectangle-out" onClick={this.submitLinks}> Find bugs </button>
             </Fade>
           </div>
         </div>
