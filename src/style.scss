@@ -104,6 +104,7 @@ body, html {
       flex-direction: row;
       justify-content: center;
       margin-top: 7px;
+      height: 40px;
 
       .report-sortby {
         margin-top: auto;
@@ -117,7 +118,9 @@ body, html {
     }
 
     .report-data {
+      height: calc(100vh - 40px - 44px - 90px - 10px);
       padding: 7px;
+      overflow: scroll;
     }
   }
 }
@@ -130,6 +133,7 @@ body, html {
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: $TerminalTop;
+  height: 32px;
 }
 
 .progress {
