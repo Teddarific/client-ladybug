@@ -29,6 +29,7 @@ class Analyze extends Component {
 
   componentDidMount() {
     setTimeout(() => {
+      console.log('opening connection...');
       socket = socketIOClient(this.state.endpoint);
       socket.emit('init', this.props.links);
       socket.on('data', (data) => {

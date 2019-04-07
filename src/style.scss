@@ -414,6 +414,10 @@ body, html {
   max-width: initial;
   width: 75vw;
 
+  svg:hover {
+    cursor: pointer;
+  }
+
   .modal-content {
     display: flex;
     margin: 10px;
@@ -450,13 +454,14 @@ body, html {
         height: 100%;
       }
 
-      .modal-fields {
+      .modal-field {
         flex-grow: 1;
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         margin-right: 10px;
-        margin-top: 2px;
-        margin-bottom: 2px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+
         .modal-field-title {
           font-size: 18px;
           font-weight: 600;
