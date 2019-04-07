@@ -8,6 +8,12 @@ $TerminalTop: #D1D1D1;
 
 body, html {
   margin: 0;
+  padding: 0;
+}
+
+.container{
+  //background-color: #d2d2d2;
+  background-size: cover;
 }
 
 .landing-container {
@@ -15,11 +21,53 @@ body, html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .landing-input-container {
   display: flex;
   flex-direction: row;
+}
+
+.landing-logo {
+  width: 300px;
+  padding-top: 30px;
+}
+
+.landing-title {
+  width:300px;
+}
+
+.find-bugs {
+  background: #ff968d;
+  color: white;
+	cursor: pointer;
+  border: none;
+	padding: 15px 50px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+  border-radius: 7px;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+}
+
+.toggle-input {
+  background: #ff968d;
+  color: white;
+	cursor: pointer;
+  border: none;
+	padding: 15px 15px;
+	display: inline-block;
+	margin: 15px 15px;
+	text-transform: uppercase;
+  border-radius: 7px;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
 }
 
 .terminal {
