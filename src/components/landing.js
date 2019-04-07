@@ -13,6 +13,7 @@ class Landing extends Component {
     this.state = {
       frontendLink: '',
       backendLink: '',
+      renderFrontend: true,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -35,6 +36,7 @@ class Landing extends Component {
   }
 
   render() {
+    if(renderFrontend){
     return (
       <div className="landing-container">
         <div className="landing-title"> Ladybug </div>
@@ -43,6 +45,15 @@ class Landing extends Component {
           <div className="landing-input-label"> Link to frontend: </div>
           <input className="landing-input" onChange={this.handleChange} type="text" name="frontendLink" value={this.state.frontendLink} />
         </div>
+        <button className="landing-start" onClick={this.submitLinks}> Find bugs! </button>
+      </div>
+    );
+  }
+  else {
+    return (
+      <div className="landing-container">
+        <div className="landing-title"> Ladybug </div>
+        <div className="landing-motto"> Your own Q&A team, one click away. </div>
         <div className="landing-input-container">
           <div className="landing-input-label"> Link to backend API: </div>
           <input className="landing-input" onChange={this.handleChange} type="text" name="backendLink" value={this.state.backendLink} />
@@ -50,6 +61,7 @@ class Landing extends Component {
         <button className="landing-start" onClick={this.submitLinks}> Find bugs! </button>
       </div>
     );
+  }
   }
 }
 
