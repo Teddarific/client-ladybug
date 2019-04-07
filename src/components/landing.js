@@ -75,6 +75,8 @@ class Landing extends Component {
     } else {
       return (
         <div className="container">
+          <img className="lower-left" alt="leaf-upper" src={LeafLeft} />
+          <img className="top-right" alt="leaf-top" src={LeafTop} />
           <div className="landing-container">
             <Fade top cascade>
               <img className="landing-logo" alt="logo" src={Logo} />
