@@ -5,6 +5,7 @@ export const ActionTypes = {
 
 export function submitLinks(feLink, beLink) {
   return (dispatch) => {
+    console.log('this is running fine....');
     dispatch({
       type: ActionTypes.SUBMIT_LINKS,
       payload: { feLink, beLink },

@@ -16,6 +16,7 @@ class Landing extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.submitLinks = this.submitLinks.bind(this);
   }
 
   handleChange(e) {
@@ -25,9 +26,12 @@ class Landing extends Component {
   }
 
   submitLinks() {
-    this.props.submitLinks(this.state.frontendLink, this.state.backendLink).then(() => {
-      this.props.history.push('/analyze');
-    });
+    console.log(this.state.frontendLink);
+    console.log(this.state.backendLink);
+    this.props.submitLinks(this.state.frontendLink, this.state.backendLink)
+      .then(() => {
+        this.props.history.push('/analyze');
+      });
   }
 
   render() {

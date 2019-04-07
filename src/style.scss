@@ -1,3 +1,13 @@
+$TerminalBlue: rgb(71, 163, 220);
+$TerminalWhite: rgb(234, 235, 229);
+$TerminalGreen: rgb(89, 249, 30);
+$TerminalRed: rgb(249, 69, 75);
+$TerminalYellow: #FFAE42;
+
+body, html {
+  margin: 0;
+}
+
 .landing-container {
   display: flex;
   flex-direction: column;
@@ -8,4 +18,41 @@
 .landing-input-container {
   display: flex;
   flex-direction: row;
+}
+
+.terminal {
+  background-color: rgb(29, 30, 40);
+  color: white;
+  width: 50vw;
+  list-style-type: none;
+  padding-left: 12px;
+  font-size: 16px;
+  font-family: 'Inconsolata', monospace;
+  margin-top: 0;
+}
+
+.terminal-carrot {
+  color: $TerminalBlue;
+  margin-right: 2px;
+}
+
+.terminal-info-text {
+  color: $TerminalWhite;
+}
+
+.terminal-success {
+  color: $TerminalGreen;
+}
+
+.terminal-error {
+  color: $TerminalRed;
+}
+
+.terminal-warning {
+  color: $TerminalYellow;
+}
+
+.terminal-space {
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
