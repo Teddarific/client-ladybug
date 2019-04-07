@@ -5,7 +5,7 @@ import autoscroll from 'autoscroll-react';
 
 const styles = {
   overflowY: 'scroll',
-  height: '300px',
+  height: '100%',
 };
 
 class Output extends React.Component {

@@ -4,6 +4,10 @@ import { withRouter } from 'react-router-dom';
 import socketIOClient from 'socket.io-client';
 
 import Terminal from './terminal';
+import Report from './report';
+
+import Logo from '../img/final_logo.png';
+import LadybugTitle from '../img/ladybug.png';
 
 let socket;
 
@@ -47,16 +51,32 @@ class Analyze extends Component {
   render() {
     return (
       <div className="analyze-container">
-        <div className="nav">
-          <div className="nav-title"> Ladybug </div>
+        <div className="analyze-main">
+          <div className="analyze-section-1">
+            <div className="analyze-section-header progress">
+              Progress
+            </div>
+            <Terminal
+              className="terminal"
+              items={this.state.data.concat({ severity: 'space' })}
+              successes={this.state.successes}
+              warnings={this.state.warnings}
+              errors={this.state.errors}
+            />
+          </div>
+          <div className="analyze-section-2">
+            <div className="analyze-section-header results">
+              Results
+            </div>
+            <Report
+              items={this.state.data}
+            />
+          </div>
         </div>
-        <Terminal
-          className="terminal"
-          items={this.state.data.concat({ severity: 'space' })}
-          successes={this.state.successes}
-          warnings={this.state.warnings}
-          errors={this.state.errors}
-        />
+        <div className="nav">
+          <img className="nav-logo" alt="logo" src={Logo} />
+          <img className="nav-title" alt="Ladybug" src={LadybugTitle} />
+        </div>
       </div>
     );
   }

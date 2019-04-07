@@ -68,10 +68,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
+      favicon: './src/img/favicon.ico',
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './200.html',
+      favicon: './src/img/favicon.ico',
     }),
   ],
 };

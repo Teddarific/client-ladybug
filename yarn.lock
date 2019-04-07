@@ -1110,7 +1110,7 @@ babel-register@^6.26.0, babel-register@^6.9.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
+babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0, babel-runtime@^6.6.1:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   dependencies:
@@ -1603,6 +1603,10 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+classnames@^2.2.3:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
 
 clean-css@4.1.x:
   version "4.1.11"
@@ -6007,6 +6011,10 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-collapsible@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/react-collapsible/-/react-collapsible-2.6.0.tgz#8cc18e8b88c46032b21c119833cd6922344636c9"
+
 react-dom@^16.3.1:
   version "16.3.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.3.1.tgz#6a3c90a4fb62f915bdbcf6204422d93a7d4ca573"
@@ -6015,6 +6023,12 @@ react-dom@^16.3.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.0"
+
+react-dropdown@^1.6.4:
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/react-dropdown/-/react-dropdown-1.6.4.tgz#8dce141bb26fb6b3c3696d16e06f4517728c57f4"
+  dependencies:
+    classnames "^2.2.3"
 
 react-redux@^5.0.7:
   version "5.0.7"
@@ -6049,6 +6063,12 @@ react-router@^4.2.0:
     path-to-regexp "^1.7.0"
     prop-types "^15.5.4"
     warning "^3.0.0"
+
+react-window-size@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-window-size/-/react-window-size-1.2.2.tgz#4fd71ba91c512550cf8a4275fadd02480bcdbb14"
+  dependencies:
+    babel-runtime "^6.6.1"
 
 react@^16.3.1:
   version "16.3.1"
