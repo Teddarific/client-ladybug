@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-do
 import Landing from './landing';
 import Analyze from './analyze';
 
+/* eslint no-unused-vars: 0 */
+
 const App = (props) => {
   return (
     <Router>

@@ -11,6 +11,8 @@ import 'react-toggle/style.css';
 import ModalController from './modalController';
 
 /* eslint no-continue: 0 */
+/* eslint jsx-a11y/label-has-for: 0 */
+/* eslint no-unused-vars: 0 */
 
 // Sort Type:
 // 0: Sort by Type

@@ -4,6 +4,7 @@ import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import Modal from 'react-responsive-modal';
 
+/* eslint no-unused-vars: 0 */
 // Props:
 // open
 // onClose
