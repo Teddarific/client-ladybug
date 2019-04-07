@@ -13,7 +13,7 @@ class InputContainer extends Component {
     this.state = {
       frontendLink: '',
       backendLink: '',
-      renderFrontend: false,
+      renderFrontend: true,
     };
 
     this.handleChange = this.handleChange.bind(this);
