@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Dropdown from 'react-dropdown';
 import Collapsible from 'react-collapsible';
 import Toggle from 'react-toggle';
+import Fade from 'react-reveal/Fade';
+import Pulse from 'react-reveal/Pulse';
 
 import 'react-dropdown/style.css';
 import 'react-toggle/style.css';
@@ -158,9 +160,11 @@ class Report extends Component {
 
     const renderGroup = (key, list) => {
       return (
-        <Collapsible transitionTime={120} trigger={key}>
-          {list.map(item => renderItem(item))}
-        </Collapsible>
+        <Pulse>
+          <Collapsible transitionTime={120} trigger={key}>
+            {list.map(item => renderItem(item))}
+          </Collapsible>
+        </Pulse>
       );
     };
 

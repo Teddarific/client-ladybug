@@ -82,6 +82,19 @@ body, html {
       width: 150px;
       margin-left: 4px;
     }
+
+    .nav-home {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      position: absolute;
+      bottom: 25px;
+      left: 20px;
+    }
+
+    .nav-home:hover {
+      cursor: pointer;
+    }
+
   }
 
   .analyze-main {
