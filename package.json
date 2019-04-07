@@ -57,6 +57,7 @@
     "react-router-dom": "^4.2.2",
     "react-syntax-highlighter": "^10.2.1",
     "react-toggle": "^4.0.2",
+    "react-typing-animation": "^1.6.2",
     "react-window-size": "^1.2.2",
     "redux": "^4.0.0",
     "redux-thunk": "^2.2.0",
