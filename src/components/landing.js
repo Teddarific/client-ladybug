@@ -8,7 +8,8 @@ import Rotate from 'react-reveal/Rotate';
 import { submitLinks } from '../actions/index';
 import Logo from '../img/final_logo.png';
 import LadybugTitle from '../img/ladybug.png';
-import LeafBottom from '../img/realLeafBottom.png';
+import LeafLeft from '../img/leaf-left.png';
+import LeafTop from '../img/leaf-top.png';
 
 import '../style.scss';
 
@@ -51,7 +52,8 @@ class Landing extends Component {
     if (this.state.renderFrontend) {
       return (
         <div className="container">
-          <img className="lower-right" alt="leaf-upper" src={LeafBottom} />
+          <img className="lower-left" alt="leaf-upper" src={LeafLeft} />
+          <img className="top-right" alt="leaf-top" src={LeafTop} />
           <div className="landing-container">
             <Fade top cascade>
               <img className="landing-logo" alt="logo" src={Logo} />
@@ -73,7 +75,6 @@ class Landing extends Component {
     } else {
       return (
         <div className="container">
-          <img className="lower-right" alt="leaf-upper" src={LeafBottom} />
           <div className="landing-container">
             <Fade top cascade>
               <img className="landing-logo" alt="logo" src={Logo} />

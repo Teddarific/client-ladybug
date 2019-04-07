@@ -118,7 +118,8 @@ body, html {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgb(68, 152, 85); // leaf green
+  // background: rgb(68, 152, 85); // leaf green
+  background: #e54242; // dark red
   border-radius: 7px;
   -webkit-transform: scale(0);
   transform: scale(0);
@@ -174,18 +175,18 @@ body, html {
 //   animation-name: wave; /* the name of the animation we defined above */
 // }
 
-.lower-right {
+.lower-left {
   bottom: 0%;
-	right: 0%;
+	left: 2%;
+  max-height: 100%;
 	position: absolute;
-  margin-right: -15px;
-  max-width: 42%;
-  height: 42%;
-  animation-duration: 4s; /* the duration of the animation */
-  animation-timing-function: ease-out; /* how the animation will behave */
-  animation-delay: 0s; /* how long to delay the animation from starting */
-  animation-iteration-count: 2; /* how many times the animation will play */
-  animation-name: waveBottom; /* the name of the animation we defined above */
+}
+
+.top-right {
+  top: 0%;
+  right: 0%;
+  max-width: 35%;
+  position: absolute;
 }
 
 .terminal {
