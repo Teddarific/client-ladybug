@@ -9,7 +9,19 @@ import Modal from 'react-responsive-modal';
 // onClose
 // item
 
-const RECOMMENDATION_MAP = {};
+// maps type to recommendation
+const RECOMMENDATION_MAP =
+{
+	"inaccessible colors": "Consider avoiding strong red and green colors, which are inaccessible for colorblind users and may seem your page differently.",
+	"accessibility for colorblind users": "A high contrast ratio is important for accessbility, so that your website can be read by people with moderately low vision. This is standardized by the W3 - Web Accessiblity Initiative. Follow their rules.",
+	"small text": "We recommend a font-size of at least 12px, so that users do not have to zoom in on your page.",
+	"possible broken link": "A broken link signals that your website may stil be in development. Ensure all links are valid to avoid an unprofessional feel.",
+	"too many header elements": "Win at marketing! Google and other search engines recommend to only have one h1 element for the best SEO results.",
+	"inline styles": "Inline styles are bad practice. We recommend using a seperate style sheet. Always be consistent!",
+	"broken button": "A button that leads to nowhere may throw off your users. Ensure all your buttons have an action.",
+	"basic password security": "Always use extremely long, unique, and randomly generated passwords. This is critical.",
+	"response time": "Slow response times may make you lose users. Check the logic of your backend service and ensure it has solid connectivity."
+}
 
 class ModalController extends Component {
   constructor(props) {
