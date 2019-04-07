@@ -56,7 +56,7 @@ body, html {
 }
 
 .find-bugs {
-  background: #404040; // black
+  background: #009C4C; // black
   color: white;
 	cursor: pointer;
   border: none;
@@ -73,7 +73,7 @@ body, html {
 }
 
 .toggle-input {
-  background: #e54242; // dark red
+  background: #404040; // dark red
   color: white;
 	cursor: pointer;
   border: none;
@@ -90,7 +90,7 @@ body, html {
 }
 
 .toggle-input:hover {
-  background: #e54242; // dark red
+  background: #009C4C; // dark red
 }
 
 
@@ -119,7 +119,7 @@ body, html {
   right: 0;
   bottom: 0;
   // background: rgb(68, 152, 85); // leaf green
-  background: #e54242; // dark red
+  background: #009C4C; // dark red
   border-radius: 7px;
   -webkit-transform: scale(0);
   transform: scale(0);
