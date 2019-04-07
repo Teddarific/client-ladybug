@@ -137,17 +137,17 @@ body, html {
   transform: scale(1);
 }
 
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(4deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
+// @keyframes wave {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   50% {
+//     transform: rotate(4deg);
+//   }
+//   100% {
+//     transform: rotate(0deg);
+//   }
+// }
 
 // @keyframes waveBottom {
 //   0% {
@@ -161,25 +161,26 @@ body, html {
 //   }
 // }
 
-.upper-left {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: -20px;
-  width: 300px;
-  animation-duration: 4s; /* the duration of the animation */
-  animation-timing-function: ease-out; /* how the animation will behave */
-  animation-delay: 0s; /* how long to delay the animation from starting */
-  animation-iteration-count: 2; /* how many times the animation will play */
-  animation-name: wave; /* the name of the animation we defined above */
-}
+// .upper-left {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   margin-left: -20px;
+//   width: 300px;
+//   animation-duration: 4s; /* the duration of the animation */
+//   animation-timing-function: ease-out; /* how the animation will behave */
+//   animation-delay: 0s; /* how long to delay the animation from starting */
+//   animation-iteration-count: 2; /* how many times the animation will play */
+//   animation-name: wave; /* the name of the animation we defined above */
+// }
 
 .lower-right {
   bottom: 0%;
 	right: 0%;
 	position: absolute;
-  margin-right: -20px;
-  width: 300px;
+  margin-right: -15px;
+  max-width: 42%;
+  height: 42%;
   animation-duration: 4s; /* the duration of the animation */
   animation-timing-function: ease-out; /* how the animation will behave */
   animation-delay: 0s; /* how long to delay the animation from starting */

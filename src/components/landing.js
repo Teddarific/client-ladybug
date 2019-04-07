@@ -8,7 +8,6 @@ import Rotate from 'react-reveal/Rotate';
 import { submitLinks } from '../actions/index';
 import Logo from '../img/final_logo.png';
 import LadybugTitle from '../img/ladybug.png';
-import Leaf from '../img/realLeaf.png';
 import LeafBottom from '../img/realLeafBottom.png';
 
 import '../style.scss';
